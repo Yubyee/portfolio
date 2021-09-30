@@ -1,0 +1,158 @@
+@import '_mixin.scss';
+@import '_common.scss';
+
+.con01{
+    width: 100%; height: 1550px;
+    position: relative;
+    margin-bottom: 150px;
+    .con01_top{
+        background: url("../img/list/title.jpg") no-repeat center center;
+        background-size: 100%;
+        height: 750px; 
+        .con01_top_wrap{
+            width: 1280px; height: 650px;
+            margin: 0 auto;
+            @include alineFlex(justify-content,center,align-items,flex-start);     
+            flex-direction: column;
+        }
+        h2{
+            @include conH2(left);
+            color: #eee;
+            z-index: 1;
+        }
+        span{
+            @include conLine(0);
+            background-color: #eee;
+            z-index: 1;
+        }
+        h3{
+            @include conDetail(left,1.5em); 
+            color: #eee;
+            z-index: 1;
+        }
+        .btn{
+            width: 160px;
+            line-height: 40px;
+            text-align: center;
+            z-index: 1;
+            border: 1px solid #eee;            
+            margin-top: 40px;
+            a{
+                color: #eee;
+            }
+
+        }
+        &::before{
+            content: '';
+            background: rgba($color: #000000, $alpha: 0.8);
+            width: 100%; height: 750px;
+            @include position(absolute,top,0,left,0);    
+        }
+    } 
+    .con01_bottom{
+        width: 1280px;
+        @include position(absolute,left,50%,bottom,0);
+        transform: translateX(-50%);
+        .pc{
+            @include position(absolute,bottom,0,left,0);
+            .pcthum{
+                width: 1075px; height:595px;
+                background-color: aqua ;
+                overflow: hidden;
+                @include position(absolute,top,47px,left,35px);
+            }
+            .pcthum img{width: 100%}
+        }
+        .mo{
+            @include position(absolute,bottom,0,right,0);
+            .mothum{
+                width: 248px; height:535px;
+                background-color: aqua ;
+                border-radius: 30px;
+                overflow: hidden;
+                @include position(absolute,bottom,10px,right,15px);
+            }
+            .mothum img{width: 100%}
+        }
+    }
+}
+.con02{
+    width: 1280px;
+    margin: 0 auto;
+    padding: 150px 0;
+    h2{
+        @include conH2(left);
+    }
+    span{
+        @include conLine(0);
+    }
+    p{
+        @include conDetail(left,1.5em); 
+    }
+}
+.con03{
+    width: 1280px;
+    margin: 0 auto;    
+    padding: 150px 0;
+    h2{
+        @include conH2(left);
+    }
+    span{
+        @include conLine(0);
+    }
+    p{
+        @include conDetail(left,1.5em); 
+    }
+    .list{
+        @include alineFlex(justify-content,space-between,align-items,center);
+        flex-wrap: wrap;        
+        li{
+            display: inline-block;
+            width: 406px; height: 280px;
+            text-align: center;
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+            div{
+                content: '';
+                background: rgba($color: #000000, $alpha: 0.3);
+                width: 100%; height: 280px;
+                @include position(absolute,top,0,left,0);  
+                display: none;
+            }
+            div.active{
+                @include alineFlex(justify-content,center,align-items,center);
+            }
+            div span{
+                width: 150px; height: 50px;
+                line-height: 50px;
+                border-radius: 25px;
+                background: #eee;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            .thumnail{width: 100%;}
+            
+        }
+    }
+}
+.con04{
+    width: 1280px; margin: 0 auto;
+    ul{
+        @include alineFlex(justify-content,space-between,align-items,center);
+        margin-bottom: 100px;
+        li{
+            font-size: 1.3em;   
+            &:hover{
+                border-bottom: 1px solid #333;
+            }         
+            a{
+                @include alineFlex(justify-content,center,align-items,center);
+                padding-bottom: 5px;
+                
+            }
+            
+        }
+    }
+}

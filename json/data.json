@@ -1,0 +1,35 @@
+{
+    "list":[
+        {
+            "code":"drop",
+            "thum":"./img/list/list_03.jpg",
+            "deviceType":"pcmo",     
+            "mode":"./img/list/pcmobile.png"
+        },
+        {
+            "code":"spaoClone",
+            "thum":"./img/list/list_02.jpg",            
+            "deviceType":"pc",        
+            "mode":"./img/list/pcmobile.png"
+        },
+        {
+            "code":"designHouse",
+            "thum":"../img/list/list_01.jpg",            
+            "deviceType":"pcmo", 
+            "mode":"./img/list/pcmobile.png"
+        }
+    ],
+    "site":[
+        {
+            "code":"designHouse",
+            "title":"Design House M+<br>Renewal",
+            "sub":"기존 웹사이트를 트렌드에 맞춰 리뉴얼",
+            "url":"https://yubyee.github.io/Design-houes/",
+            "pcThum":"../img/detail/designhouse/designhouse_pc.png",
+            "moThum":"../img/detail/designhouse/designhouse_mo.png",
+            "plan":"산만했던 페이지를 간결하게 재 구성하기 위해 기획하였습니다.<br>콘텐츠 크기가 일정하게 노출되어있지 않아서 통일성이 없고 서브페이지 갯수가 포함하고 있는 내용에 비해 많았습니다.<br>때문에 레이아웃의 통일성을 중점 요소로 잡고 페이지 단일화를 지향했습니다.",
+            "elementTitle":["슬라이드","제이슨","더보기","캘린더","로컬스토리지","반응형 구현","모바일 헤더"],
+            "elementThum":["../img/detail/designhouse/slider.jpg","../img/detail/designhouse/josn.jpg","../img/detail/designhouse/viewmore.jpg","../img/detail/designhouse/calender.jpg","../img/detail/designhouse/local.jpg","../img/detail/designhouse/reactive.jpg","../img/detail/designhouse/mobileheader.jpg"]            
+        }
+    ]
+}

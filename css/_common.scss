@@ -1,0 +1,142 @@
+@import '_mixin.scss';
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    color: #222;
+    line-height: 1;
+}
+ul, li, ol{list-style: none;}
+a{text-decoration: none;}
+img{vertical-align: top;}
+
+
+body{
+    position: relative;
+    &.nav{
+        height: 100vh; overflow: hidden;
+    }    
+}
+header{    
+    width: 1280px;
+    margin: 0 auto;
+    .burger_box{
+        position: relative;
+        z-index: 999;
+        div{
+            width: 40px; height: 30px;        
+            @include position(absolute,right,0,top,70px);
+            @include alineFlex(justify-content,space-between,align-items,center);
+            flex-direction: column;
+            span{
+                width: 100%; height: 2px;
+                background: #eee;
+            }
+        }
+        .close{
+            span{
+                background: #222;
+            }
+            .trigger1{
+                @include position(absolute,right,0,top,10px);
+                animation: buger1 0.3s forwards linear;
+                animation-delay: 0.1s;
+            }
+            .trigger2{display: none;}
+            .trigger3{
+                @include position(absolute,right,0,top,10px);
+                animation: buger2 0.3s forwards linear;
+                animation-delay: 0.1s;
+            }
+        }
+    }    
+    nav{        
+        width: 40%; height: 100vh;
+        background: #eee;            
+        @include position(absolute,right,0,top,0);
+        @include alineFlex(justify-content,flex-start,align-items,center);     
+        opacity: 0;  
+        transition: 0.3s;
+        z-index: -1;        
+        ul{                        
+            padding-left: 10%;
+            width: 100%;
+            li{                
+                @include alineFlex(justify-content,flex-start,align-items,flex-start);
+                flex-direction: column;
+                letter-spacing: -1.5px;
+            }
+            li a{display: inline-block;}
+            .menu_main{
+                padding-top: 70px;
+                font-size: 1.8em;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            .menu_sub{
+                padding-top: 20px;
+                font-size: 1.4em;
+                padding-left: 5%;
+            }
+            li:nth-of-type(1){
+                padding: 0;
+            }
+            li span{
+                width: 0; height: 2px;
+                background: #222;
+                margin: 5px 0;
+                opacity: 0;
+                transition: 0.3s;
+            }
+        }
+        &::before{
+            content: '';
+            background: rgba($color: #000000, $alpha: 0.8);
+            width: 60%; height: 100vh;
+            @include position(fixed,top,0,left,0);
+        }
+        &.active{
+            opacity: 1;
+            z-index: 2;        
+        }
+    }
+}
+footer{
+    background-color: #333;
+    .footer_wrap{
+        width: 1280px;
+        margin: 0 auto;
+        @include alineFlex(justify-content,space-between,align-items,center);
+        padding: 120px 0;
+        span{
+            color: #eee;
+            font-size: 1.3em;
+            font-weight: 200;
+        }
+        div{
+            b{
+                color: #eee;
+                border-bottom: 1px solid #eee;
+                font-size: 1.5em;
+                font-weight: 400;
+                text-transform: uppercase;
+                line-height: 1.5;
+                padding-bottom: 5px;
+            }
+            ul{
+                @include alineFlex(justify-content,flex-end,align-items,center);               
+                margin-top: 20px;
+            }
+            ul li{
+                display: inline-block;
+                width: 30px; height: 30px;
+                margin-left: 10px ;
+                @include alineFlex(justify-content,center,align-items,center);  
+            }
+            ul li img{
+                width: 100%;
+            }
+        }
+    }
+}
