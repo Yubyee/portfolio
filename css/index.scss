@@ -1,0 +1,32 @@
+@import '_mixin.scss';
+@import '_common.scss';
+
+body{    
+    background-color: #222;  
+    overflow: hidden;  
+}
+main{
+    width: 100%; height: 100vh;
+    
+    background-color: #222;
+    // @include absolute(left,0,top,0)
+    width: 1280px;
+    margin: 0 auto;    
+    @include alineFlex(justify-content,center,align-items,center);     
+    h2{
+        color: #eee;
+        @include position(absolute,left,50%,top,9%);
+        transform: translateX(-50%);
+        font-size: 5em;
+        font-family: 'Rozha One', serif;
+        letter-spacing: 0;
+    }
+    .face{
+        @include position(absolute,left,50%,top,50%);
+        transform: translate(-50%, -50%);
+        width: 620px; height: 620px;
+        border-radius: 100%;
+        background-color: #fefefe;     
+        z-index: 1;           
+    }
+}
