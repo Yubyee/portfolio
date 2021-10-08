@@ -28,7 +28,13 @@ function header(){
             menuList[i].addEventListener('mouseout', ()=>{
                 underline[i].style = `width:0; opacity:0`
             })            
+            menuList[i].addEventListener('click', (e)=>{
+                localStorage.dataNum = menuList[i].getAttribute('data-num')
+            })
+
+
         }
+
 
     }); 
 

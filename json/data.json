@@ -1,32 +1,63 @@
 {
     "list":[
         {
-            "code":"drop",
-            "thum":"../img/list.01",
-            "deviceType":"pcmo"        
-        },
-        {
-            "code":"spaoClone",
-            "thum":"../img/list.01",
+            "name":"drop",
+            "dataNum":"3",
+            "thum":"./img/list/list_03.jpg",
+            "diveceThum":"./img/list/pcmobile.png",
             "deviceType":"pc"        
         },
         {
-            "code":"designHouse",
-            "thum":"../img/list.01",
+            "name":"spaoClone",
+            "dataNum":"2",
+            "thum":"./img/list/list_02.jpg",
+            "diveceThum":"./img/list/pcmobile.png",
+            "deviceType":"pc"        
+        },
+        {
+            "name":"designHouse",
+            "dataNum":"1",
+            "thum":"./img/list/list_01.jpg",
+            "diveceThum":"./img/list/pcmobile.png",
             "deviceType":"pcmo"        
         }
     ],
-    "site":[
+    "detail":[
+        {
+            "code":"drop",
+            "dataNum":3,
+            "title":"Every day last drop<br>Clone",
+            "sub":"스크롤이벤트를 중점적으로 구현",
+            "url":"https://yubyee.github.io/Design-houes/",
+            "pcThum":"./img/detail/designhouse/designhouse_pc.jpg",
+            "moThum":"",
+            "plan":"스크롤 이벤트가 주로 구현되어있는 사이트를 선정하고 클론사이트를 제작하였습니다.<br>이벤트에 대한 이해도와 플러그인을 사용하여 새로운 기능과 이벤트에 대한 이해도를 높이고 실제로 활용할 수 있도록 하였습니다.<br>팀프로젝트로 진행하여 협업의 기회가 되는 작업물이 될 수 있도록 하였습니다.",
+            "elementTitle":["스크롤 이벤트", "플러그인","라이브러리","이미지변환"],
+            "elementThum":["",""]            
+        },
+        {
+            "code":"spaoClone",
+            "dataNum":2,
+            "title":"SPA Brand SPAO<br> Clone",
+            "sub":"쇼핑몰 클론 작업",
+            "url":"https://yubyee.github.io/Clone/",
+            "pcThum":"./img/detail/spao/spaoClone_pc.jpg",
+            "moThum":"",
+            "plan":"접근성이 높은 사이트를 선정하여 실제로 어떻게 사용되는지 분석하고,<br>이용자가 많은 쇼핑몰을 지정하여 사용빈도가 높은 스크립트를 완벽하게 이해할 수 있도록 하였습니다.<br>관심 분야인 쇼핑몰 구현을 실제로 해봄으로써 분야에 대한 이해도를 높히기 위해 기획하였습니다.",
+            "elementTitle":["슬라이드","제이슨","리스트추가","리스트확인","팝업","계산","토글","옵션"],
+            "elementThum":["./img/detail/spao/slide.jpg","./img/detail/spao/json.jpg","./img/detail/spao/list.jpg","./img/detail/spao/alert.jpg","./img/detail/spao/popup.jpg","./img/detail/spao/calc.jpg","./img/detail/spao/toggle.jpg","./img/detail/spao/size.jpg"]            
+        },
         {
             "code":"designHouse",
+            "dataNum":1,
             "title":"Design House M+<br>Renewal",
             "sub":"기존 웹사이트를 트렌드에 맞춰 리뉴얼",
             "url":"https://yubyee.github.io/Design-houes/",
-            "pcThum":"../img/detail/designhouse/designhouse_pc.png",
-            "moThum":"../img/detail/designhouse/designhouse_mo.png",
+            "pcThum":"./img/detail/designhouse/designhouse_pc.jpg",
+            "moThum":"./img/detail/designhouse/designhouse_mo.jpg",
             "plan":"산만했던 페이지를 간결하게 재 구성하기 위해 기획하였습니다.<br>콘텐츠 크기가 일정하게 노출되어있지 않아서 통일성이 없고 서브페이지 갯수가 포함하고 있는 내용에 비해 많았습니다.<br>때문에 레이아웃의 통일성을 중점 요소로 잡고 페이지 단일화를 지향했습니다.",
             "elementTitle":["슬라이드","제이슨","더보기","캘린더","로컬스토리지","반응형 구현","모바일 헤더"],
-            "elementThum":["../img/detail/designhouse/slider.jpg","../img/detail/designhouse/josn.jpg","../img/detail/designhouse/viewmore.jpg","../img/detail/designhouse/calender.jpg","../img/detail/designhouse/local.jpg","../img/detail/designhouse/reactive.jpg","../img/detail/designhouse/mobileheader.jpg"]            
+            "elementThum":["./img/detail/designhouse/slide.jpg","./img/detail/designhouse/json.jpg","./img/detail/designhouse/viewmore.jpg","./img/detail/designhouse/calender.jpg","./img/detail/designhouse/local.jpg","./img/detail/designhouse/reactive.jpg","./img/detail/designhouse/mobileheader.jpg"]            
         }
     ]
 }

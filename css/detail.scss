@@ -88,6 +88,7 @@
     }
     p{
         @include conDetail(left,1.5em); 
+        text-transform: none;
     }
 }
 .con03{
@@ -104,22 +105,23 @@
         @include conDetail(left,1.5em); 
     }
     .list{
-        @include alineFlex(justify-content,space-between,align-items,center);
+        @include alineFlex(justify-content,flex-start,align-items,center);
         flex-wrap: wrap;        
         li{
             display: inline-block;
             width: 406px; height: 280px;
             text-align: center;
-            border: 1px solid #eee;
+            // border: 1px solid #eee;
             position: relative;
             overflow: hidden;
             margin-bottom: 30px;
+            margin-right: 31px;
             div{
-                content: '';
-                background: rgba($color: #000000, $alpha: 0.3);
+                background: rgba($color: #000000, $alpha: 0.6);
                 width: 100%; height: 280px;
                 @include position(absolute,top,0,left,0);  
                 display: none;
+                z-index: 1;
             }
             div.active{
                 @include alineFlex(justify-content,center,align-items,center);
@@ -132,27 +134,42 @@
                 font-size: 1.2em;
                 font-weight: bold;
             }
-            .thumnail{width: 100%;}
-            
+            .thumnail{width: 100%; transition: 0.2s;}        
+        }
+        li:nth-of-type(3n){
+            margin-right: 0;
         }
     }
 }
 .con04{
     width: 1280px; margin: 0 auto;
+    position: relative;
     ul{
         @include alineFlex(justify-content,space-between,align-items,center);
         margin-bottom: 100px;
+        width: 100%;
         li{
-            font-size: 1.3em;   
-            &:hover{
-                border-bottom: 1px solid #333;
-            }         
+            font-size: 1.3em;       
             a{
                 @include alineFlex(justify-content,center,align-items,center);
-                padding-bottom: 5px;
-                
-            }
-            
+                padding-bottom: 5px;                
+                &:hover{
+                    border-bottom: 1px solid #333;
+                }                 
+            }            
         }
+        .prev{
+            @include position(absolute,top,50%,left,0);
+            transform: translateY(-50%);
+        }
+        .golist{
+            @include position(absolute,top,50%,left,50%);
+            transform: translate(-50%,-50%);
+        }
+        .next{
+            @include position(absolute,top,50%,right,0);
+            transform: translateY(-50%);
+        }        
     }
+    
 }

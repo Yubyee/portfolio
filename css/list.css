@@ -58,6 +58,24 @@
   }
 }
 
+@-webkit-keyframes moveList {
+  100% {
+    -webkit-transform: translate(-10px, -10px);
+            transform: translate(-10px, -10px);
+    -webkit-box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
+  }
+}
+
+@keyframes moveList {
+  100% {
+    -webkit-transform: translate(-10px, -10px);
+            transform: translate(-10px, -10px);
+    -webkit-box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
+  }
+}
+
 @keyframes buger1 {
   0% {
     -webkit-transform: rotate(0);
@@ -85,6 +103,15 @@
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
     opacity: 1;
+  }
+}
+
+@keyframes moveList {
+  100% {
+    -webkit-transform: translate(-10px, -10px);
+            transform: translate(-10px, -10px);
+    -webkit-box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
   }
 }
 
@@ -486,5 +513,10 @@ footer .footer_wrap div ul li img {
 
 .con02 .list li .thumnail {
   width: 100%;
+}
+
+.con02 .list li.active {
+  -webkit-animation: moveList 0.2s linear forwards;
+          animation: moveList 0.2s linear forwards;
 }
 /*# sourceMappingURL=list.css.map */

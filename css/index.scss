@@ -26,7 +26,11 @@ main{
         transform: translate(-50%, -50%);
         width: 620px; height: 620px;
         border-radius: 100%;
-        background-color: #fefefe;     
-        z-index: 1;           
+        // background-color: #fefefe;      
+        overflow: hidden;
+        img{
+            width: 100%;
+
+        }      
     }
 }

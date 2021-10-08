@@ -75,8 +75,11 @@
             a.active{
                 @include alineFlex(justify-content,center,align-items,center);
             }
-            .thumnail{width: 100%;}
-            
+            .thumnail{width: 100%;} 
+            &.active{
+                animation: moveList 0.2s linear forwards;
+            }           
         }
+        
     }
 }

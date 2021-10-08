@@ -15,7 +15,8 @@ img{vertical-align: top;}
 body{
     position: relative;
     &.nav{
-        height: 100vh; overflow: hidden;
+        height: 100vh;
+        overflow: hidden;
     }    
 }
 header{    
