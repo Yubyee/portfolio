@@ -2,6 +2,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
 $('header').load('inc.html header > .header_wrap', header);
 $('footer').load('inc.html footer > .footer_wrap', footer);
+$('.top_container').load('inc.html .top_container > .top', top);
 
 function header(){
     
@@ -28,9 +29,19 @@ function header(){
             menuList[i].addEventListener('mouseout', ()=>{
                 underline[i].style = `width:0; opacity:0`
             })            
+            menuList[i].addEventListener('click', (e)=>{
+                localStorage.dataNum = menuList[i].getAttribute('data-num')
+            })
         }
-
     }); 
+
+    const pin = document.querySelector('.pin')
+    // PC해상도 일때만 실행되게 설정해야됨!
+    pin.addEventListener('click', ()=>{
+        e.preventDefault();
+        alert('핀터레스트 로그인 후 확인 가능합니다.')
+        document.location.href = 'https://www.pinterest.co.kr/hello6324/designed-by-yubyee-jang/'
+    });
 
 }
 
@@ -38,9 +49,36 @@ function footer(){
     const tel = document.querySelector('.tel')
     // PC해상도 일때만 실행되게 설정해야됨!
     tel.addEventListener('click', ()=>{
-        alert('모바일 혹은 태블릿에서 연결 가능합니다.')
+        e.preventDefault();
+        alert('모바일에서 연결 가능합니다.')
     });
 }
+
+function top(){
+
+    const top = document.querySelector('.top')
+
+    window.addEventListener('scroll', function(){    
+       if(this.scrollY > 550){
+           top.style = "opacity: 1"
+       }else{
+           top.style = "opactiy: 0"
+       }
+
+       top.addEventListener('click', ()=>{
+           this.scrollTo(0, 1000)
+           window.scrollTo({
+            top: 0,
+            // left: 0,
+            behavior: 'smooth'
+          });
+       });
+
+    });
+
+}
+
+
 
 const a = document.querySelectorAll('a')
 for(let i=0; i<a.length; i++){

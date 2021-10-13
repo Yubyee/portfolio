@@ -15,18 +15,16 @@ img{vertical-align: top;}
 body{
     position: relative;
     &.nav{
-        height: 100vh; overflow: hidden;
+        height: 100vh;
+        overflow: hidden;
     }    
 }
 header{    
-    width: 1280px;
     margin: 0 auto;
     .burger_box{
         position: relative;
         z-index: 999;
         div{
-            width: 40px; height: 30px;        
-            @include position(absolute,right,0,top,70px);
             @include alineFlex(justify-content,space-between,align-items,center);
             flex-direction: column;
             span{
@@ -52,7 +50,7 @@ header{
         }
     }    
     nav{        
-        width: 40%; height: 100vh;
+        height: 100vh;
         background: #eee;            
         @include position(absolute,right,0,top,0);
         @include alineFlex(justify-content,flex-start,align-items,center);     
@@ -69,14 +67,10 @@ header{
             }
             li a{display: inline-block;}
             .menu_main{
-                padding-top: 70px;
-                font-size: 1.8em;
                 font-weight: bold;
                 text-transform: uppercase;
             }
             .menu_sub{
-                padding-top: 20px;
-                font-size: 1.4em;
                 padding-left: 5%;
             }
             li:nth-of-type(1){
@@ -93,7 +87,7 @@ header{
         &::before{
             content: '';
             background: rgba($color: #000000, $alpha: 0.8);
-            width: 60%; height: 100vh;
+            height: 100vh;
             @include position(fixed,top,0,left,0);
         }
         &.active{
@@ -105,13 +99,13 @@ header{
 footer{
     background-color: #333;
     .footer_wrap{
-        width: 1280px;
+        // width: 1280px;
         margin: 0 auto;
-        @include alineFlex(justify-content,space-between,align-items,center);
-        padding: 120px 0;
+        // @include alineFlex(justify-content,space-between,align-items,center);
+        // padding: 120px 0;
         span{
             color: #eee;
-            font-size: 1.3em;
+            // font-size: 1.3em;
             font-weight: 200;
         }
         div{
@@ -125,7 +119,7 @@ footer{
                 padding-bottom: 5px;
             }
             ul{
-                @include alineFlex(justify-content,flex-end,align-items,center);               
+                // @include alineFlex(justify-content,flex-end,align-items,center);               
                 margin-top: 20px;
             }
             ul li{
@@ -138,5 +132,176 @@ footer{
                 width: 100%;
             }
         }
+    }
+}
+
+.top_container{
+    @include position(fixed,bottom,50px,left,50%);
+    transform: translateX(-50%);
+    width: 1280px;
+    margin: 0 auto;
+    z-index: 999;
+    .top{
+        @include position(absolute,bottom,0,right,0);
+        width: 65px; height: 40px;
+        border-radius: 10px;
+        background-color: #222;
+        @include alineFlex(justify-content,center,align-items,center);
+        color: #eee;
+        font-weight: bold;
+        font-size: 1.15em;         
+        border: none;
+        opacity: 0;
+        transition: 0.5s;
+        &:hover{
+            animation: btn 0.3s linear forwards;            
+            background-color: #000;
+            // border: 1px solid #000;
+        }
+        span{
+            width: 10px;
+            margin-left: 5px;
+            img{width: 100%;}
+        }                
+    }    
+}
+
+// PC
+@media (min-width:1250px){
+    header{    
+        width: 1280px;
+        .burger_box{
+            div{
+                width: 40px; height: 30px;        
+                @include position(absolute,right,0,top,70px);
+            }
+        }    
+        nav{  
+            width: 40%;             
+            ul{        
+                .menu_main{                    
+                    padding-top: 70px;
+                    font-size: 1.8em;
+                }
+                .menu_sub{                    
+                    padding-top: 20px;
+                    font-size: 1.4em;
+                }
+            }
+            &::before{
+                width: 60%;
+            }
+        }
+    }
+    footer{
+        .footer_wrap{            
+            width: 1280px;
+            padding: 120px 0;
+            @include alineFlex(justify-content,space-between,align-items,center);
+            span{
+                font-size: 1.3em;
+            }
+            div{
+                ul{
+                    @include alineFlex(justify-content,flex-end,align-items,center);                                   
+                }
+            }
+        }
+    }
+    .top_container{       
+    }
+}
+
+// Tablet
+@media (min-width:768px) and (max-width:1249px){
+    header{    
+        width: 100%;
+        .burger_box{
+            div{
+                width: 40px; height: 30px;        
+                @include position(absolute,right,30px,top,70px);
+            }
+        }    
+        nav{  
+            width: 45%;             
+            ul{        
+                .menu_main{                    
+                    padding-top: 50px;
+                    font-size: 1.5em;
+                }
+                .menu_sub{                    
+                    padding-top: 15px;
+                    font-size: 1.2em;
+                }
+            }
+            &::before{
+                width: 55%;
+            }
+        }
+    }
+    footer{
+        .footer_wrap{            
+            width: 100%;
+            padding: 120px 30px;
+            @include alineFlex(justify-content,space-between,align-items,center);
+            span{
+                font-size: 1.1em;
+            }
+            div{
+                ul{
+                    @include alineFlex(justify-content,flex-end,align-items,center);                                   
+                }
+            }
+        }
+    }
+    .top_container{   
+    }
+}
+
+// Mobile
+@media (max-width:767px){
+    header{    
+        width: 100%;
+        .burger_box{
+            div{
+                width: 30px; height: 25px;        
+                @include position(absolute,right,20px,top,70px);
+            }
+        }    
+        nav{ 
+            width: 100%;              
+            ul{        
+                .menu_main{                    
+                    padding-top: 30px;
+                    font-size: 1.5em;
+                }
+                .menu_sub{                    
+                    padding-top: 10px;
+                    font-size: 1.2em;
+                }
+            }
+            &::before{
+                width: 0%;
+            }
+        }
+    }
+    footer{
+        .footer_wrap{            
+            width: 100%;
+            padding: 120px 20px;
+            @include alineFlex(justify-content,center,align-items,center);
+            flex-direction: column;
+            span{
+                font-size: 0.8em;
+            }
+            div{
+                margin-top: 30px;
+                ul{
+                    @include alineFlex(justify-content,center,align-items,center);                                   
+                }
+            }
+        }
+    }
+    .top_container{      
     }
 }
