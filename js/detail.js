@@ -26,6 +26,7 @@ window.addEventListener('DOMContentLoaded', function(){
                                 <div class="con01_bottom">
                                     <div class="pc">
                                         <p class="pcthum"><img src="${v.pcThum}" alt="${v.code}PC"></p>
+                                        <p class="pcthum2"></p>
                                         <p><img src="img/detail/pc.png" alt=""></p>
                                     </div>
                                     <div class="mo">                                                       
@@ -46,8 +47,8 @@ window.addEventListener('DOMContentLoaded', function(){
                     }) 
 
                     // 사이트 프리뷰
-                    v.preview.forEach(function(v2,k){
-                        content4 += `<li class="grid-item" style="height: ${v.height[k]}px"><img src="${v2}" alt=""></li>`
+                    v.preview.forEach(function(v2){
+                        content4 += `<li class="grid-item"><img src="${v2}" alt=""></li>`
                     })                  
                 }                
             });

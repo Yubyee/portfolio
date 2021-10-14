@@ -90,6 +90,8 @@
     }
 }
 
+
+// pc
 @media (min-width:1250px){
     .con01{
         background-size: 100%;
@@ -128,6 +130,8 @@
         }
     }
 }
+
+// tablet
 @media (min-width:768px) and (max-width:1249px){    
     .con01{
         background-size: cover;
@@ -153,8 +157,8 @@
             width: 100%;
             padding: 0 34px;
             li{
-                width: 340px; height: 230px;
-                margin: 0 20px 30px 0;
+                width: 47.5%; height: 230px;
+                margin: 0 5% 30px 0;
                 a{height: 280px;}
                 .thumnail{width: 100%;} 
                 &.active{
@@ -168,6 +172,8 @@
         }
     }
 }
+
+// mobile
 @media (max-width:767px){    
     .con01{
         background-size: cover;

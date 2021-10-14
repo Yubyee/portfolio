@@ -20,13 +20,6 @@
             "thum":"./img/list/list_01.jpg",
             "diveceThum":"./img/list/pcmobile.png",
             "deviceType":"pcmo"        
-        },
-        {
-            "name":"designHouse",
-            "dataNum":"1",
-            "thum":"./img/list/list_01.jpg",
-            "diveceThum":"./img/list/pcmobile.png",
-            "deviceType":"pcmo"        
         }
     ],
     "detail":[
