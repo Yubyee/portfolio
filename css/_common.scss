@@ -1,0 +1,314 @@
+@import '_mixin.scss';
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    color: #222;
+    line-height: 1;
+}
+ul, li, ol{list-style: none;}
+a{text-decoration: none;}
+img{vertical-align: top;}
+
+
+body{
+    position: relative;
+    &.nav{
+        height: 100vh;
+        overflow: hidden;
+    }    
+}
+header{    
+    margin: 0 auto;
+    .burger_box{
+        position: relative;
+        z-index: 999;
+        div{
+            @include alineFlex(justify-content,space-between,align-items,center);
+            flex-direction: column;
+            span{
+                width: 100%; height: 2px;
+                background: #eee;
+            }
+        }
+        .close{
+            span{
+                background: #222;
+            }
+            .trigger1{
+                @include position(absolute,right,0,top,10px);
+                animation: buger1 0.3s forwards linear;
+                animation-delay: 0.1s;
+            }
+            .trigger2{display: none;}
+            .trigger3{
+                @include position(absolute,right,0,top,10px);
+                animation: buger2 0.3s forwards linear;
+                animation-delay: 0.1s;
+            }
+        }
+    }    
+    nav{        
+        height: 100vh;
+        background: #eee;            
+        @include position(absolute,right,0,top,0);
+        @include alineFlex(justify-content,flex-start,align-items,center);     
+        opacity: 0;  
+        transition: 0.3s;
+        z-index: -1;        
+        ul{                        
+            padding-left: 10%;
+            width: 100%;
+            li{                
+                @include alineFlex(justify-content,flex-start,align-items,flex-start);
+                flex-direction: column;
+                letter-spacing: -1.5px;
+            }
+            li a{display: inline-block;}
+            .menu_main{
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            .menu_sub{
+                padding-left: 5%;
+            }
+            li:nth-of-type(1){
+                padding: 0;
+            }
+            li span{
+                width: 0; height: 2px;
+                background: #222;
+                margin: 5px 0;
+                opacity: 0;
+                transition: 0.3s;
+            }
+        }
+        &::before{
+            content: '';
+            background: rgba($color: #000000, $alpha: 0.8);
+            height: 100vh;
+            @include position(fixed,top,0,left,0);
+        }
+        &.active{
+            opacity: 1;
+            z-index: 2;        
+        }
+    }
+}
+footer{
+    background-color: #333;
+    .footer_wrap{
+        // width: 1280px;
+        margin: 0 auto;
+        // @include alineFlex(justify-content,space-between,align-items,center);
+        // padding: 120px 0;
+        span{
+            color: #eee;
+            // font-size: 1.3em;
+            font-weight: 200;
+        }
+        div{
+            b{
+                color: #eee;
+                border-bottom: 1px solid #eee;
+                font-size: 1.5em;
+                font-weight: 400;
+                text-transform: uppercase;
+                line-height: 1.5;
+                padding-bottom: 5px;
+            }
+            ul{
+                // @include alineFlex(justify-content,flex-end,align-items,center);               
+                margin-top: 20px;
+            }
+            ul li{
+                display: inline-block;
+                width: 30px; height: 30px;
+                margin-left: 10px ;
+                @include alineFlex(justify-content,center,align-items,center);  
+            }
+            ul li img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.top_container{
+    @include position(fixed,bottom,50px,left,50%);
+    transform: translateX(-50%);
+    width: 1280px;
+    margin: 0 auto;
+    z-index: 999;
+    .top{
+        @include position(absolute,bottom,0,right,0);
+        width: 65px; height: 40px;
+        border-radius: 10px;
+        background-color: #222;
+        @include alineFlex(justify-content,center,align-items,center);
+        color: #eee;
+        font-weight: bold;
+        font-size: 1.15em;         
+        border: none;
+        opacity: 0;
+        transition: 0.5s;
+        &:hover{
+            animation: btn 0.3s linear forwards;            
+            background-color: #000;
+            // border: 1px solid #000;
+        }
+        span{
+            width: 10px;
+            margin-left: 5px;
+            img{width: 100%;}
+        }                
+    }    
+}
+
+// PC
+@media (min-width:1250px){
+   
+    header{    
+        width: 1280px;
+        .burger_box{
+            div{
+                width: 40px; height: 30px;        
+                @include position(absolute,right,0,top,70px);
+            }
+        }    
+        nav{  
+            width: 40%;             
+            ul{        
+                .menu_main{                    
+                    padding-top: 70px;
+                    font-size: 1.8em;
+                }
+                .menu_sub{                    
+                    padding-top: 20px;
+                    font-size: 1.4em;
+                }
+            }
+            &::before{
+                width: 60%;
+            }
+        }
+    }
+    footer{
+        .footer_wrap{            
+            width: 1280px;
+            padding: 120px 0;
+            @include alineFlex(justify-content,space-between,align-items,center);
+            span{
+                font-size: 1.3em;
+            }
+            div{
+                ul{
+                    @include alineFlex(justify-content,flex-end,align-items,center);                                   
+                }
+            }
+        }
+    }  
+}
+
+// Tablet
+@media (min-width:768px) and (max-width:1249px){    
+    header{    
+        width: 100%;
+        .burger_box{
+            div{
+                width: 40px; height: 30px;        
+                @include position(absolute,right,30px,top,70px);
+            }
+        }    
+        nav{  
+            width: 45%;             
+            ul{        
+                .menu_main{                    
+                    padding-top: 50px;
+                    font-size: 1.5em;
+                }
+                .menu_sub{                    
+                    padding-top: 15px;
+                    font-size: 1.2em;
+                }
+            }
+            &::before{
+                width: 55%;
+            }
+        }
+    }
+    footer{
+        .footer_wrap{            
+            width: 100%;
+            padding: 120px 30px;
+            @include alineFlex(justify-content,space-between,align-items,center);
+            span{
+                font-size: 1.1em;
+            }
+            div{
+                ul{
+                    @include alineFlex(justify-content,flex-end,align-items,center);                                   
+                }
+            }
+        }
+    }
+    .top_container{
+        width:100%;
+        .top{
+            margin-right: 30px;
+        }
+    }
+}
+
+// Mobile
+@media (max-width:767px){
+    header{    
+        width: 100%;
+        .burger_box{
+            div{
+                width: 30px; height: 25px;        
+                @include position(absolute,right,20px,top,70px);
+            }
+        }    
+        nav{ 
+            width: 100%;              
+            ul{        
+                .menu_main{                    
+                    padding-top: 30px;
+                    font-size: 1.5em;
+                }
+                .menu_sub{                    
+                    padding-top: 10px;
+                    font-size: 1.2em;
+                }
+            }
+            &::before{
+                width: 0%;
+            }
+        }
+    }
+    footer{
+        .footer_wrap{            
+            width: 100%;
+            padding: 120px 20px;
+            @include alineFlex(justify-content,center,align-items,center);
+            flex-direction: column;
+            span{
+                font-size: 0.8em;
+            }
+            div{
+                margin-top: 30px;
+                ul{
+                    @include alineFlex(justify-content,center,align-items,center);                                   
+                }
+            }
+        }
+    }    
+    .top_container{
+        width:100%;
+        .top{
+            margin-right: 20px;
+        }        
+    }
+}
