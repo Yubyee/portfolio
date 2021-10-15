@@ -9,7 +9,7 @@
     @include alineFlex(justify-content,center,align-items,center);     
     flex-direction: column;
     h2{
-        @include conH2(center);
+        @include conH2(center,3.5em);
         color: #eee;
         z-index: 1;
     }

@@ -26,9 +26,9 @@
     }
 }
 
-@mixin conH2($a){
+@mixin conH2($a,$b){
     text-align: $a;
-    font-size: 3.5em;
+    font-size: $b;
     text-transform: uppercase;
 }
 @mixin conLine($a){
@@ -42,8 +42,8 @@
     text-align: $a;
     font-size: $b;
     font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: -2px;
+    // text-transform: uppercase;
+    letter-spacing: -1px;
     line-height: 1.5;
 }
 

@@ -7,34 +7,16 @@ window.addEventListener('DOMContentLoaded', function(){
     canvas = document.createElement('canvas');
     let ctx = canvas.getContext('2d');
 
-    // let elWidth = window.innerWidth;
-    // let elHeight = 540;
 
-    // canvas.width = elWidth;
-    // canvas.height = elHeight;
+    let elWidth = parseInt(container.clientWidth)
+    let elHeight = parseInt(container.clientHeight)
 
-    container.appendChild(canvas);
+    canvas.width = elWidth;
+    canvas.height = elHeight;  
 
-    function resizeCanvas(){
-        let elWidth = window.innerWidth;
-        let elHeight = parseInt(container.clientHeight)
-    
-        canvas.width = elWidth;
-        canvas.height = elHeight;  
-         
-        let main = function() {
-            let now = Date.now(),
-            delta = (now - then) / 10;    
-            app.update(delta);
-            app.render();        
-            then = now;
-        }
-    
-        let then = Date.now();
-        setInterval(main, 1000 / app.FPS);
+    container.appendChild(canvas);    
 
-    }
-
+     
     function getRandom(min, max){
         return Math.floor(Math.random() * (max - min + 1)) + min;        
     }
@@ -112,18 +94,15 @@ window.addEventListener('DOMContentLoaded', function(){
 
     let app = new App();
 
-    // let main = function(){
-    //     let now = Date.now(),
-    //     delta = (now - then) / 10;
-    //     app.update(delta);
-    //     app.render();        
-    //     then = now;
-    // }
-    // let then = Date.now();
-    // setInterval(main, 1000/app.FPS)  
-
-    resizeCanvas();
-
+    let main = function(){
+        let now = Date.now(),
+        delta = (now - then) / 10;
+        app.update(delta);
+        app.render();        
+        then = now;
+    }
+    let then = Date.now();
+    setInterval(main, 1000/app.FPS)  
 
 
     // 자기소개 타이핑
@@ -144,6 +123,16 @@ window.addEventListener('DOMContentLoaded', function(){
     };
     setInterval(typing, 100);
 
+    
+    //전화연결
+    const tel = document.querySelector('.tel')
+    if (window.matchMedia("(min-width: 1250px)").matches) {        
+        tel.addEventListener('click', function(e){
+            e.preventDefault();
+            alert('모바일에서 연결 가능합니다.')
+        }); 
+    }  
+
 
     
     //여기서부터 스크롤 이벤트
@@ -163,7 +152,7 @@ window.addEventListener('DOMContentLoaded', function(){
                     let increment = Math.ceil(target / speed);
                     if (count < target) {
                         counter.innerHTML = count + increment;
-                        setTimeout(updateCount, 300);
+                        setTimeout(updateCount, 200);
                         if(counter.innerHTML < 10){
                             counter.innerHTML = '0' + counter.innerHTML
                         }

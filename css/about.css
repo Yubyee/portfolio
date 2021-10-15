@@ -374,12 +374,6 @@ footer .footer_wrap div ul li img {
 }
 
 .top_container {
-  position: fixed;
-  bottom: 50px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 1280px;
   margin: 0 auto;
   z-index: 999;
 }
@@ -477,6 +471,15 @@ footer .footer_wrap div ul li img {
         -ms-flex-align: center;
             align-items: center;
   }
+  .top_container {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 1280px;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1249px) {
@@ -533,9 +536,9 @@ footer .footer_wrap div ul li img {
   }
   .top_container {
     width: 100%;
-  }
-  .top_container .top {
-    margin-right: 30px;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
   }
 }
 
@@ -600,20 +603,26 @@ footer .footer_wrap div ul li img {
   }
   .top_container {
     width: 100%;
-  }
-  .top_container .top {
-    margin-right: 20px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
   }
 }
 
 .con01 .bg_black {
   width: 100%;
-  background-color: #333;
 }
 
 .con01 .bg_black .me {
   margin: 0 auto;
   position: relative;
+}
+
+.con01 .bg_black .me canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
 }
 
 .con01 .bg_black .me .photo {
@@ -695,12 +704,6 @@ footer .footer_wrap div ul li img {
   width: 100%;
 }
 
-.con02 h2 {
-  text-align: center;
-  font-size: 3.5em;
-  text-transform: uppercase;
-}
-
 .con02 span {
   width: 70px;
   height: 2px;
@@ -748,12 +751,6 @@ footer .footer_wrap div ul li img {
 
 .con03 .con03_wrap {
   margin: 0 auto;
-}
-
-.con03 .skils h2 {
-  text-align: center;
-  font-size: 3.5em;
-  text-transform: uppercase;
 }
 
 .con03 .skils span {
@@ -859,12 +856,6 @@ footer .footer_wrap div ul li img {
           animation: skils 0.5s 1.6s forwards;
 }
 
-.con03 .right .history h2 {
-  text-align: center;
-  font-size: 3.5em;
-  text-transform: uppercase;
-}
-
 .con03 .right .history span {
   width: 70px;
   height: 2px;
@@ -890,12 +881,6 @@ footer .footer_wrap div ul li img {
   letter-spacing: -1px;
 }
 
-.con03 .right .language h2 {
-  text-align: center;
-  font-size: 3.5em;
-  text-transform: uppercase;
-}
-
 .con03 .right .language span {
   width: 70px;
   height: 2px;
@@ -915,12 +900,6 @@ footer .footer_wrap div ul li img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.con04 h2 {
-  text-align: center;
-  font-size: 3.5em;
-  text-transform: uppercase;
 }
 
 .con04 span {
@@ -967,7 +946,7 @@ footer .footer_wrap div ul li img {
   position: relative;
 }
 
-.con04 ul li a::before {
+.con04 ul li .pinterest::before {
   content: '';
   background: rgba(0, 0, 0, 0.3);
   border-radius: 100%;
@@ -984,8 +963,7 @@ footer .footer_wrap div ul li img {
   text-align: center;
   font-size: 1.8em;
   font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
   line-height: 1.5;
   margin-top: 60px;
 }
@@ -1081,14 +1059,14 @@ footer .footer_wrap div ul li img {
     font-size: 10em;
   }
   .con02 ul li p small {
+    margin-left: 10px;
     font-size: 1.5em;
   }
   .con02 ul li h3 {
     text-align: center;
     font-size: 1.8em;
     font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     line-height: 1.5;
     margin-top: 60px;
   }
@@ -1136,8 +1114,7 @@ footer .footer_wrap div ul li img {
     text-align: center;
     font-size: 1.8em;
     font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     line-height: 1.5;
     margin-top: 120px;
     padding-bottom: 20px;
@@ -1187,7 +1164,7 @@ footer .footer_wrap div ul li img {
     width: 540px;
     height: 540px;
   }
-  .con04 ul li a::before {
+  .con04 ul li .pinterest::before {
     width: 540px;
     height: 540px;
   }
@@ -1195,10 +1172,14 @@ footer .footer_wrap div ul li img {
     text-align: center;
     font-size: 1.8em;
     font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     line-height: 1.5;
     margin-top: 60px;
+  }
+  h2 {
+    text-align: center;
+    font-size: 3.5em;
+    text-transform: uppercase;
   }
 }
 
@@ -1334,8 +1315,7 @@ footer .footer_wrap div ul li img {
     text-align: center;
     font-size: 1.3em;
     font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     line-height: 1.5;
     margin-top: 60px;
   }
@@ -1387,8 +1367,7 @@ footer .footer_wrap div ul li img {
     text-align: center;
     font-size: 1.8em;
     font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     line-height: 1.5;
     margin-top: 80px;
     padding-bottom: 50px;
@@ -1447,7 +1426,7 @@ footer .footer_wrap div ul li img {
     width: 520px;
     height: 520px;
   }
-  .con04 ul li a::before {
+  .con04 ul li .pinterest::before {
     width: 520px;
     height: 520px;
   }
@@ -1455,10 +1434,14 @@ footer .footer_wrap div ul li img {
     text-align: center;
     font-size: 3em;
     font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     line-height: 1.5;
     margin-top: 30px;
+  }
+  h2 {
+    text-align: center;
+    font-size: 3.5em;
+    text-transform: uppercase;
   }
 }
 
@@ -1513,7 +1496,7 @@ footer .footer_wrap div ul li img {
   }
   .con01 .bg_white ul li {
     text-align: center;
-    margin: 10px 30px;
+    margin: 10px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1589,8 +1572,7 @@ footer .footer_wrap div ul li img {
     text-align: center;
     font-size: 1.3em;
     font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     line-height: 1.5;
     margin-top: 30px;
   }
@@ -1642,8 +1624,7 @@ footer .footer_wrap div ul li img {
     text-align: center;
     font-size: 1.5em;
     font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     line-height: 1.5;
     margin-top: 50px;
     padding-bottom: 30px;
@@ -1709,7 +1690,7 @@ footer .footer_wrap div ul li img {
     width: 300px;
     height: 300px;
   }
-  .con04 ul li a::before {
+  .con04 ul li .pinterest::before {
     width: 300px;
     height: 300px;
   }
@@ -1717,10 +1698,14 @@ footer .footer_wrap div ul li img {
     text-align: center;
     font-size: 2em;
     font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     line-height: 1.5;
     margin-top: 30px;
+  }
+  h2 {
+    text-align: center;
+    font-size: 3em;
+    text-transform: uppercase;
   }
 }
 /*# sourceMappingURL=about.css.map */

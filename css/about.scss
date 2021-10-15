@@ -5,11 +5,15 @@
     .bg_black{                
         width: 100%;
         // height: 540px;  
-        background-color: #333;                    
+        // background-color: #333;                        
         .me{
             // width: 1280px;
             margin: 0 auto;
             position: relative;  
+            canvas{
+                @include position(fixed,left,0,top,0);
+                z-index:-1;
+            }    
             .photo{
                 // width: 540px; height: 540px;
                 border-radius: 100%;
@@ -73,7 +77,7 @@
 .con02{
     // margin-top:270px;
     // margin-bottom: 150px;
-    h2{@include conH2(center);}
+    // h2{@include conH2(center,3.5em);}
     span{@include conLine(auto);}
     ul{
         @include alineFlex(justify-content,center,align-items,center);              
@@ -110,7 +114,7 @@
         // @include alineFlex(justify-content,center,align-items,center);  
         // flex-direction: column;     
         // width: 50%;       
-        h2{@include conH2(center);}
+        // h2{@include conH2(center,3.5em);}
         span{@include conLine(auto);}
         li img{width: 100%;}
         .sk{
@@ -157,7 +161,7 @@
     .right{
         // width: 50%;       
         .history{
-            h2{@include conH2(center);}
+            // h2{@include conH2(center,3.5em);}
             span{@include conLine(auto);}
             .history_wrap1{
                 @include alineFlex(justify-content,center,align-items,center);
@@ -172,7 +176,7 @@
         }
         .language{
             // margin-top: 135px;
-            h2{@include conH2(center);}
+            // h2{@include conH2(center,3.5em);}
             span{@include conLine(auto);}
             ul{
                 width: 80%;
@@ -184,7 +188,7 @@
 }
 .con04{
     // padding: 150px 0;
-    h2{@include conH2(center);}
+    // h2{@include conH2(center,3.5em);}
     span{@include conLine(auto);}
     ul{
         @include alineFlex(justify-content,center,align-items,center);              
@@ -199,15 +203,15 @@
             border-radius: 100%;
             background-color: #eee;
             display: block;     
-            position: relative;   
-            &::before{
+            position: relative;              
+        }
+        li .pinterest::before{
                 content: '';
                 background: rgba($color: #000000, $alpha: 0.3);
                 // width: 540px; height: 540px;
                 border-radius: 100%;
                 @include position(absolute,top,0,left,0);            
             }    
-        }
 
         li a img{
             width: 100%;
@@ -262,6 +266,7 @@
                 font-size: 10em;
             }
             li p small{
+                margin-left: 10px;
                 font-size: 1.5em;
             }
             li h3{
@@ -320,17 +325,18 @@
                 width: 640px;
             }
             li a{
-                width: 540px; height: 540px;
-                &::before{
-                    width: 540px; height: 540px;   
-                }    
+                width: 540px; height: 540px;                   
             }    
+            li .pinterest::before{
+                width: 540px; height: 540px;   
+            } 
             li h3{
                 @include conDetail(center,1.8em);              
                 margin-top: 60px;
             }
         }
     }
+    h2{@include conH2(center,3.5em);}
 }
 
 
@@ -458,16 +464,17 @@
             }
             li a{
                 width: 520px; height: 520px;
-                &::before{
-                    width: 520px; height: 520px;
-                }    
             }    
+            li .pinterest::before{
+                width: 520px; height: 520px;   
+            } 
             li h3{
                 @include conDetail(center,3em);              
                 margin-top: 30px;
             }
         }
     }
+    h2{@include conH2(center,3.5em);}
 }
 
 
@@ -503,7 +510,7 @@
                 margin-top: 180px;  
                 li{                   
                     text-align: center;
-                    margin:10px 30px;
+                    margin:10px 0;
                     @include alineFlex(justify-content,center,align-items,center);  
                 }
                 li p{
@@ -603,15 +610,16 @@
                 margin-bottom: 100px;
             }
             li a{
-                width: 300px; height: 300px;
-                &::before{
-                    width: 300px; height: 300px;
-                }    
-            }    
+                width: 300px; height: 300px;  
+            }              
+            li .pinterest::before{
+                width: 300px; height: 300px;   
+            } 
             li h3{
                 @include conDetail(center,2em);              
                 margin-top: 30px;
             }
         }
     }
+    h2{@include conH2(center,3em);}
 }

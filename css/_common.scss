@@ -23,7 +23,6 @@ ul, li, ol{list-style: none;}
 a{text-decoration: none;}
 img{vertical-align: top;}
 
-
 body{
     position: relative;
     &.nav{
@@ -148,9 +147,9 @@ footer{
 }
 
 .top_container{
-    @include position(fixed,bottom,50px,left,50%);
-    transform: translateX(-50%);
-    width: 1280px;
+    // @include position(fixed,bottom,50px,left,50%);
+    // transform: translateX(-50%);
+    // width: 1280px;
     margin: 0 auto;
     z-index: 999;
     .top{
@@ -179,8 +178,7 @@ footer{
 }
 
 // PC
-@media (min-width:1250px){
-   
+@media (min-width:1250px){   
     header{    
         width: 1280px;
         .burger_box{
@@ -221,6 +219,12 @@ footer{
             }
         }
     }  
+    .top_container{
+        @include position(fixed,bottom,50px,left,50%);
+        transform: translateX(-50%);
+        width: 1280px;
+        margin: 0 auto;
+    }
 }
 
 // Tablet
@@ -267,9 +271,7 @@ footer{
     }
     .top_container{
         width:100%;
-        .top{
-            margin-right: 30px;
-        }
+        @include position(fixed,bottom,50px,right,30px);
     }
 }
 
@@ -319,8 +321,6 @@ footer{
     }    
     .top_container{
         width:100%;
-        .top{
-            margin-right: 20px;
-        }        
+        @include position(fixed,bottom,30px,right,20px);
     }
 }
