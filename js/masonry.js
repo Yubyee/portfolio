@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', function(){
             columnWidth: $('.grid-item:first').width(),
             gutter: $('.grid').width()*0.05
         });    
-    }, 1000);
+    }, 2000);
     
           
 });
