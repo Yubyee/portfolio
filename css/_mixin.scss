@@ -1,0 +1,76 @@
+@mixin position($a,$b,$c,$d,$e){
+    position: $a;
+    #{$b}: $c;
+    #{$d}: $e;
+}
+
+@mixin alineFlex($a,$b,$c,$d){
+    display: flex;    
+    #{$a}: $b;
+    #{$c}: $d;    
+}
+@keyframes buger1{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(45deg);
+    }
+}
+@keyframes buger2{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(-45deg);
+    }
+}
+
+@mixin conH2($a,$b){
+    text-align: $a;
+    font-size: $b;
+    text-transform: uppercase;
+}
+@mixin conLine($a){
+    width: 70px; height: 2px;
+    background-color: #333;
+    display: block;
+    margin: 40px $a 60px;
+}
+@mixin conDetail($a,$b){
+    // white-space: pre-line;
+    text-align: $a;
+    font-size: $b;
+    font-weight: 300;
+    // text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 1.5;
+}
+
+@keyframes skils{
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes moveList{
+    100%{
+        transform: translate(-10px, -10px);
+        box-shadow: 0 10px 10px 0 rgba(0,0,0,0.4);
+    }
+}
+
+@keyframes btn{
+    100%{
+        transform: translate(0, -5px);
+        box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
+    }
+}
+
+@media (min-width:1250px){
+}
+@media (min-width:768px) and (max-width:1249px){
+}
+@media (max-width:767px){
+}
