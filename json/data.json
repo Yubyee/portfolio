@@ -63,5 +63,47 @@
             "preview":["./img/detail/designhouse/fullpage01.jpg","./img/detail/designhouse/fullpage02.jpg","./img/detail/designhouse/fullpage03.jpg","./img/detail/designhouse/fullpage04.jpg","./img/detail/designhouse/fullpage05.jpg"]            ,
             "height":["240","468","890","786","854"]
         }
+    ],
+    "career":[
+        {
+            "careerTitle":"(주)모비젠",
+            "careerDetailA":"응용소프트웨어 개발 및 공급업",
+            "careerDetailB":"UI솔루션팀 책임",
+            "careerDetailC":"5개월 (2021.11 ~ 2022.03)",
+            "careerDetailD":"개인사유",
+            "careerDetailE":"웹사이트 및 디자인 가이드 제작<br>웹사이트 개발 및 유지 보수",
+            "careerDetailF":"Kotra 무역투자회사 Admin페이지 디자인 및 개발"
+        },
+        {
+            "careerTitle":"롯데쇼핑(주)e커머스사업본부",
+            "careerDetailA":"오픈마켓, 쇼핑몰",
+            "careerDetailB":"디자인팀 사원",
+            "careerDetailC":"36개월 (2018.04 ~ 2021.04)",
+            "careerDetailD":"계약만료",
+            "careerDetailE":"MD 행사 관련 이벤트 배너 및 기획전 제작<br>마케팅 행사 관련 이벤트 배너 및 기획전 제작<br>상품 및 기획전 연결, 업로드",
+            "careerDetailF":"10명 내외의 셀 리더 경험, 백화점 주요 행사 관련 상시 노출 기획전 제작"
+        }
+    ],
+    "self":[
+        {
+            "selfTitle":"지원동기",
+            "selfDetail":"가나다"
+        },
+        {
+            "selfTitle":"성장과정",
+            "selfDetail":"ㄴㅇㄹ"
+        },
+        {
+            "selfTitle":"학교 생활 및 교육 활동",
+            "selfDetail":"ㅎㅎㄱ"
+        },
+        {
+            "selfTitle":"성격 장점 및 단점",
+            "selfDetail":"흎"
+        },
+        {
+            "selfTitle":"입사 후 포부",
+            "selfDetail":"ㅠㅠㅎ"
+        }
     ]
 }
